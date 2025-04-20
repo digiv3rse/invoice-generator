@@ -135,7 +135,7 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({ onClose, setInvoices, selecte
                   id="senderEmail"
                   name="senderEmail"
                   type="email"
-                  placeholder="Sender's email"
+                  placeholder="Sender&apos;s email"
                   onChange={handleInputChange}
                   value={formFields.senderEmail}
                   required
@@ -144,14 +144,14 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({ onClose, setInvoices, selecte
 
               <div className="flex flex-col w-[30%]">
                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="recipientEmail">
-                  Recipient's Email
+                  Recipient&apos;s Email
                 </label>
                 <input
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                   id="recipientEmail"
                   name="recipientEmail"
                   type="email"
-                  placeholder="Client's email address"
+                  placeholder="Client&apos;s email address"
                   onChange={handleInputChange}
                   value={formFields.recipientEmail}
                   required

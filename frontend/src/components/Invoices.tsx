@@ -77,7 +77,7 @@ const Invoices: React.FC = () => {
   const handleDeleteInvoice = async (id: number) => {
     try {
       alert("Are you sure you want to delete this invoice?")
-      await axios.delete(`https://luminous-gem-934a001e95.strapiapp.com/api/invoices/${id}`);
+      await axios.delete(`http://localhost:1337/api/invoices/${id}`);
       setInvoices(invoices.filter((invoice) => invoice.id !== id));
     } catch (error) {
       console.error(error);
@@ -162,7 +162,7 @@ const Invoices: React.FC = () => {
                   <div className="lg:w-1/3 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
                     <h2 className="text-lg text-gray-900 font-medium mb-2">Billed To:</h2>
                     <div className="">
-                      <h2 className=" text-gray-900 text-base mb-1 font-medium">Recipient's Email</h2>
+                      <h2 className=" text-gray-900 text-base mb-1 font-medium">Recipient&apos;s Email</h2>
                       <p className="leading-relaxed text-base mb-5">{invoice.attributes.recipientEmail}</p>
                     </div>
 
@@ -175,12 +175,12 @@ const Invoices: React.FC = () => {
                   <div className="lg:w-1/3 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
                     <h2 className="text-lg text-gray-900 font-medium mb-2">From:</h2>
                     <div className="">
-                      <h2 className=" text-gray-900 text-base mb-1 font-medium">Sender's Name</h2>
+                      <h2 className=" text-gray-900 text-base mb-1 font-medium">Sender&apos;s Name</h2>
                       <p className="leading-relaxed text-base mb-5">{invoice.attributes.name}</p>
                     </div>
 
                     <div>
-                      <h2 className=" text-gray-900 text-base mb-1 font-medium">Sender's Email</h2>
+                      <h2 className=" text-gray-900 text-base mb-1 font-medium">Sender&apos;s Email</h2>
                       <p className="leading-relaxed text-base mb-4">{invoice.attributes.senderEmail}</p>
                     </div>
                   </div>

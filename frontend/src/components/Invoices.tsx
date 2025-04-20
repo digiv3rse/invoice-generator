@@ -35,7 +35,7 @@ const Invoices: React.FC = () => {
 
   useEffect(() => {
     const fetchInvoices = () => {
-      fetch("http://localhost:1337/api/invoices?populate=invoice")
+      fetch("https://luminous-gem-934a001e95.strapiapp.com/api/invoices?populate=invoice")
         .then((res) => {
           if (!res.ok) {
             throw new Error("Network response was not ok");
@@ -77,7 +77,7 @@ const Invoices: React.FC = () => {
   const handleDeleteInvoice = async (id: number) => {
     try {
       alert("Are you sure you want to delete this invoice?")
-      await axios.delete(`http://localhost:1337/api/invoices/${id}`);
+      await axios.delete(`https://luminous-gem-934a001e95.strapiapp.com/api/invoices/${id}`);
       setInvoices(invoices.filter((invoice) => invoice.id !== id));
     } catch (error) {
       console.error(error);

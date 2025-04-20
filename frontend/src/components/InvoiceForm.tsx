@@ -76,7 +76,7 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({ onClose, setInvoices, selecte
 
       if (selectedInvoice) {
         // Update an existing invoice
-        const data = await axios.put(`http://localhost:1337/api/invoices/${selectedInvoice.id}`, {
+        const data = await axios.put(`https://luminous-gem-934a001e95.strapiapp.com/api/invoices/${selectedInvoice.id}`, {
           data: { name, senderEmail, recipientEmail, shippingAddress, dueDate, date, invoiceNote, description, qty, rate, total },
         });
         console.log(data)
@@ -84,7 +84,7 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({ onClose, setInvoices, selecte
         window.location.reload()
       } else {
       // Create a new invoice
-      const { data } = await axios.post('http://localhost:1337/api/invoices', {
+      const { data } = await axios.post('https://luminous-gem-934a001e95.strapiapp.com/api/invoices', {
         data: { name, senderEmail, recipientEmail, shippingAddress, dueDate, date, invoiceNote, description, qty, rate, total },
       });
       console.log(data);

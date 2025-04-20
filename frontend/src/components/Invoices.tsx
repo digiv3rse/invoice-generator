@@ -77,7 +77,7 @@ const Invoices: React.FC = () => {
   const handleDeleteInvoice = async (id: number) => {
     try {
       alert("Are you sure you want to delete this invoice?")
-      await axios.delete(`http://localhost:1337/api/invoices/${id}`);
+      await axios.delete(`https://luminous-gem-934a001e95.strapiapp.com/api/invoices/${id}`);
       setInvoices(invoices.filter((invoice) => invoice.id !== id));
     } catch (error) {
       console.error(error);
